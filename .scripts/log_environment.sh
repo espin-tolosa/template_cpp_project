@@ -5,8 +5,10 @@
 print_header_wrapper()
 {
   echo "                                                                           "
-  echo "###########################################################################"
-  echo $1
+  GREEN='\033[0;32m'
+  NC='\033[0m' # No Color
+  printf "${GREEN}###########################################################################${NC}\n"
+  printf "${GREEN}$1${NC}\n"
   eval "$2"
   echo "                                                                           "
 }
@@ -26,8 +28,10 @@ else
   echo " Environment setup on this computer:                                       "
   print_header_wrapper "GCC" "gcc --version"
   print_header_wrapper "CLANG" "clang --version"
+  print_header_wrapper "CLANG-TIDY" "clang-tidy --version"
   print_header_wrapper "LINUX STANDARD BASE (DISTRIBUTION)" "lsb_release -a"
   print_header_wrapper "CMAKE" "cmake --version"
+  print_header_wrapper "GBD" "gdb --version"
   
   if [[ "$1" == "-pu" ]]
   then
