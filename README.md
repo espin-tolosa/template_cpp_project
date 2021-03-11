@@ -1,22 +1,26 @@
-# template_cpp_project
+# Template for C++ Projects
 
-Building my own C++ template step-by-step.
+My own template (on development) for C++ projects.
 
 The principles of design are:
 
 - Unified style code: clang-format (YES)
 - Portatiblity: Unix, Windows (not jet)
-- Static analysis: clang-tidy (not jet)
-- Multi-compiler support: GCC, CLANG, MVSC (not jet)
+- Static analysis: clang-tidy (in progress)
+- Multi-compiler support: GCC, CLANG, MVSC (in progress)
 - Dependencies manager: CONAN (not jet)
 - others...
 
 Compilation Linux:
 
-git clone https://github.com/leftyset/template_cpp_project.git
+```
+git clone [url-repository]
 cd template_cpp_project
 mkdir build
 cmake ..
 cmake --build .
+```
 
+
+Samuel Espin Tolosa, 2021
 Thanks!
